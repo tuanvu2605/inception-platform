@@ -80,7 +80,8 @@ export default {
     },
     readerData(rawFile) {
       this.loading = true
-      return new Promise((resolve, reject) => {
+      // remove reject in params
+      return new Promise((resolve) => {
         const reader = new FileReader()
         reader.onload = e => {
           const data = e.target.result

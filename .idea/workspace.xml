@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4538b60-9948-45a9-bf07-9af2cbff441d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/UploadExcel/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/UploadExcel/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +76,7 @@
       <workItem from="1595687776055" duration="7533000" />
       <workItem from="1595735814436" duration="8212000" />
       <workItem from="1595849066121" duration="3438000" />
-      <workItem from="1595916354256" duration="1921000" />
+      <workItem from="1595916354256" duration="3020000" />
     </task>
     <servers />
   </component>
@@ -114,10 +116,10 @@
     </state>
     <state width="1680" height="287" key="GridCell.Tab.0.right/0.23.1680.1027/-205.-1057.1920.1057@0.23.1680.1027" timestamp="1594276349701" />
     <state width="1659" height="280" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1595558045702" />
-    <state x="341" y="175" key="SettingsEditor" timestamp="1595586616475">
+    <state x="341" y="175" key="SettingsEditor" timestamp="1595921320542">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="341" y="175" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1595586616475" />
+    <state x="341" y="175" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1595921320542" />
     <state x="503" y="158" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595591370277">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -132,9 +134,9 @@
     </state>
     <state x="505" y="248" key="run.anything.popup/0.23.1680.1027/-205.-1057.1920.1057@0.23.1680.1027" timestamp="1594276347269" />
     <state x="505" y="248" key="run.anything.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1594020161352" />
-    <state x="504" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1595591066507">
+    <state x="504" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1595921379756">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="504" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1595591066507" />
+    <state x="504" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1595921379756" />
   </component>
 </project>
