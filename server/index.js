@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 
 
 
-mongoose.connect("mongodb://localhost:27017/platform", {
+mongoose.connect("mongodb://10.148.0.2:27017/platform", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
