@@ -50,7 +50,7 @@ app.get("/", (req, res) => {
     console.log(ipInfo)
     // var geo = geoip.lookup(ip);
     // console.log(geo);
-    res.render("ads");
+    res.send("hello");
 });
 
 app.get("/ad/mobile/:id", (req, res) => {
