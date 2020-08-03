@@ -329,8 +329,8 @@
                     type: 'warning'
                 }).then(() => {
                     axios
-                        .post(urlPath("/ad/add"), {
-                            productId: item._id
+                        .post(urlPath("/ad/remove"), {
+                            itemId : item._id
                         })
                         .then(response => {
                             this.$message({

@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4538b60-9948-45a9-bf07-9af2cbff441d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/server/views/banner.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/views/full.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/views/native.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/views/ads/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/ads/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +84,7 @@
       <workItem from="1596007308620" duration="27965000" />
       <workItem from="1596163768244" duration="322000" />
       <workItem from="1596164263577" duration="4820000" />
-      <workItem from="1596258978449" duration="12059000" />
+      <workItem from="1596258978449" duration="19533000" />
     </task>
     <servers />
   </component>
@@ -94,6 +100,10 @@
     </state>
     <state x="312" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.1027/-205.-1057.1920.1057@0.23.1680.1027" timestamp="1594107233695" />
     <state x="312" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1595695970304" />
+    <state x="554" y="346" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596449855046">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="554" y="346" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1596449855046" />
     <state x="578" y="290" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594720844689">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -136,9 +146,9 @@
     </state>
     <state x="505" y="248" key="run.anything.popup/0.23.1680.1027/-205.-1057.1920.1057@0.23.1680.1027" timestamp="1594276347269" />
     <state x="505" y="248" key="run.anything.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1594020161352" />
-    <state x="504" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1596197358367">
+    <state x="504" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1596442608839">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="504" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1596197358367" />
+    <state x="504" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1596442608839" />
   </component>
 </project>

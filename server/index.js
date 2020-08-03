@@ -7,7 +7,6 @@ const expressip = require('express-ip');
 const axios = require('axios')
 const parse = require('parse-link-header')
 
-// var geoip = require('geoip-lite');
 
 
 const app = express();
@@ -24,7 +23,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 
-mongoose.connect("mongodb://localhost:27017/platform", {
+mongoose.connect("mongodb://35.198.244.10:27017/platform", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
@@ -43,43 +42,56 @@ let countryModel = require("./country_schema")
 // ROUTES
 
 
-
-
 app.get("/", (req, res) => {
-    const ipInfo = req.ipInfo;
-    console.log(ipInfo)
-    // var geo = geoip.lookup(ip);
-    // console.log(geo);
+    // const ipInfo = req.ipInfo;
+    // console.log(ipInfo)
     res.send("hello");
 });
 
-app.get("/ad/mobile/:id", (req, res) => {
+app.get("/ad/mobile/native/:id", (req, res) => {
     let id = req.params.id;
-    adModel.findById(id,{},{},(err,result)=>{
-        console.log(result)
-        res.render("ads",{ ad:result });
+    adModel.findById(id, {}, {}, (err, result) => {
+        res.render("native", { ad: result });
     })
 
 });
 
-
-
-// uncompleted
-app.get("/ad/all", (req, res) => {
-
-    const options = {
-        page: 1,
-        limit: 20
-    };
-
-    adModel.paginate({}, options, function (err, result) {
-        if (err) {
-            res.send("Error while fetching countries");
-        } else {
-            res.json(result);
-        }
+app.get("/ad/mobile/banner/:id", (req, res) => {
+    let id = req.params.id;
+    adModel.findById(id, {}, {}, (err, result) => {
+        res.render("banner", { ad: result });
     })
 });
+
+app.get("/ad/mobile/full/:id", (req, res) => {
+    let id = req.params.id;
+    adModel.findById(id, {}, {}, (err, result) => {
+        res.render("full", { ad: result });
+    })
+});
+
+app.get("/ad/mobile/enable", (req, res) => {
+    res.json({status:'success', isEnable : true})
+});
+
+
+
+// // uncompleted
+// app.get("/ad/all", (req, res) => {
+//
+//     const options = {
+//         page: 1,
+//         limit: 20
+//     };
+//
+//     adModel.paginate({}, options, function (err, result) {
+//         if (err) {
+//             res.send("Error while fetching countries");
+//         } else {
+//             res.json(result);
+//         }
+//     })
+// });
 
 
 app.post("/ad/listing", (req, res) => {
@@ -88,7 +100,7 @@ app.post("/ad/listing", (req, res) => {
     const options = {
         page: opt.page,
         limit: opt.limit,
-        sort:{
+        sort: {
             updated_at: 1
         }
     };
@@ -125,7 +137,7 @@ app.post("/ad/update/", (req, res) => {
         req.body.ad,
         (err, ad) => {
             if (!err) {
-                res.json({message: 'Update '+ req.body.ad.title.toUpperCase() + ' Success!', type: 'success'});
+                res.json({message: 'Update ' + req.body.ad.title.toUpperCase() + ' Success!', type: 'success'});
             }
         }
     );
@@ -144,9 +156,8 @@ app.post("/ad/add", (req, res) => {
 });
 
 app.post("/ad/remove", (req, res) => {
-    let bannerType = req.body.bannerType;
-    let countryCode = req.body.countryCode;
-    adModel.findByIdAndRemove(id , {},err => {
+    let id = req.body.itemId;
+    adModel.findByIdAndRemove(id, {}, err => {
         if (err) {
             res.json({message: 'Remove Ad failed!', type: 'fail'});
         } else {
@@ -155,21 +166,28 @@ app.post("/ad/remove", (req, res) => {
     });
 });
 
-app.post("/ad/getItem", (req, res) => {
-    let id = req.body.productId;
-    adModel.findByIdAndRemove(id , {},err => {
-        if (err) {
-            res.json({message: 'Remove Ad failed!', type: 'fail'});
-        } else {
-            res.json({message: 'Remove Ad success!', type: 'success'});
-        }
-    });
+app.post("/ad/get/mobile", (req, res) => {
+    let _adType = req.body.adType;
+    if (_adType == 1){
+        res.json({status : 'success' , url: 'http://35.198.244.10:3000/ad/mobile/full/1'})
+    }else if (_adType == 2){
+        res.json({status : 'success' , url: 'http://35.198.244.10:3000/ad/mobile/banner/1'})
+    }else {
+        res.json({status : 'success' , url: 'http://35.198.244.10:3000/ad/mobile/native/1'})
+    }
+    // adModel.findOne({adType: _adType}, (err, ad) => {
+    //     if (err) {
+    //         res.status(400).json({message: 'ADs not found.'});
+    //     } else {
+    //         res.json(ad)
+    //
+    //     }
+    // });
 });
-
 
 
 app.get("/ad/shopifyIds", (req, res) => {
-    adModel.find({},{shopifyProductId:1, _id: 0}, (err, results) => {
+    adModel.find({}, {shopifyProductId: 1, _id: 0}, (err, results) => {
         if (err) {
             res.send("Error while fetching shopify ids");
         } else {
