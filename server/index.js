@@ -49,7 +49,7 @@ app.get("/", (req, res) => {
     const ipInfo = req.ipInfo;
     console.log(ipInfo)
     // var geo = geoip.lookup(ip);
-    console.log(geo);
+    // console.log(geo);
     res.render("ads");
 });
 
