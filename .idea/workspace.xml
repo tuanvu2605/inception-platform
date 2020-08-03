@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d4538b60-9948-45a9-bf07-9af2cbff441d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/icons/svg/shopify.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/views/shopify/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/const.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/public/images/shopify.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/views/ads.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ModalCreate/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ModalCreate/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/const.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/const.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/views/ads/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/ads/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/views/excel/upload-excel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/excel/upload-excel.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/client/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/ad_schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/ad_schema.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-    </list>
+    <list default="true" id="d4538b60-9948-45a9-bf07-9af2cbff441d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,7 +75,7 @@
       <workItem from="1596007308620" duration="27965000" />
       <workItem from="1596163768244" duration="322000" />
       <workItem from="1596164263577" duration="4820000" />
-      <workItem from="1596258978449" duration="10120000" />
+      <workItem from="1596258978449" duration="10501000" />
     </task>
     <servers />
   </component>
