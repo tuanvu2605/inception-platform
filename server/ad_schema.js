@@ -3,6 +3,10 @@ const mongoosePaginate = require('mongoose-paginate-v2');
 
 // Schema for ad
 const adSchema = mongoose.Schema({
+    shopifyProductId: {
+        type: String,
+        required: true
+    },
     adType: {
         type: Number,
         required: true
@@ -32,6 +36,14 @@ const adSchema = mongoose.Schema({
         type: [String],
         required: true,
         default: []
+    },
+    sku: {
+        type: String,
+        required: true
+    },
+    description: {
+        type: String,
+        required: true
     },
     status: {
         type: String,

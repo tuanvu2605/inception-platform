@@ -7,20 +7,21 @@
                         <el-input v-model="filter.title" placeholder="Enter product name"></el-input>
                     </el-form-item>
                     <el-form-item label="Status">
-                        <el-select   v-model="filter.status" placeholder="Status by">
+                        <el-select v-model="filter.status" placeholder="Status by">
                             <el-option v-for="item in statusOpts" :key="item" :label="item" :value="item"/>
                         </el-select>
                     </el-form-item>
                     <el-form-item label="Locations">
                         <el-drag-select v-model="filter.location" multiple placeholder="请选择" style="width:350px;">
-                            <el-option v-for="item in [{name: 'Viet Nam', code:'VN'}]" :key="item.code" :label="item.name" :value="item.code"/>
+                            <el-option v-for="item in [{name: 'Viet Nam', code:'VN'}]" :key="item.code"
+                                       :label="item.name" :value="item.code"/>
                         </el-drag-select>
                     </el-form-item>
                     <el-form-item>
-                        <el-button type="primary" icon="el-icon-search"  @click="filterItems" style="color: white">Search</el-button>
+                        <el-button type="primary" icon="el-icon-search" @click="filterItems" style="color: white">
+                            Search
+                        </el-button>
                     </el-form-item>
-
-
                 </el-form>
             </el-col>
             <el-col :span="4">
@@ -31,7 +32,6 @@
                 </div>
             </el-col>
         </el-row>
-
 
 
         <div class="table-container">
@@ -47,9 +47,9 @@
                         <span>{{ $index + 1 }}</span>
                     </template>
                 </el-table-column>
-                <el-table-column label="Thumb" align="center" width="80">
+                <el-table-column label="Thumb" align="center" width="120">
                     <template slot-scope="{row}">
-                        <el-image :src="row.thumb" style="width: 40px ; height: 40px"
+                        <el-image :src="row.thumb" style="width: 80px ; height: 80px"
                                   :preview-src-list="row.images"></el-image>
                     </template>
                 </el-table-column>
@@ -58,7 +58,11 @@
                         <a target="_blank" :href="row.url">{{ row.title }}</a>
                     </template>
                 </el-table-column>
-
+                <el-table-column label="Description" min-width="350">
+                    <template slot-scope="{row}">
+                        {{ row.description }}
+                    </template>
+                </el-table-column>
                 <el-table-column label="Location" prop="id" width="250" align="center">
                     <template slot-scope="{row}">
                         <el-tag
@@ -70,7 +74,7 @@
                         </el-tag>
                     </template>
                 </el-table-column>
-                <el-table-column label="Status" class-name="status-col" align="center" width="120">
+                <el-table-column label="Status" class-name="status-col" align="center" width="150">
                     <template slot-scope="{row}">
                         <el-tag :type="row.status == 'published' ? 'success' : 'danger'">
                             {{ row.status.toUpperCase() }}
@@ -79,16 +83,15 @@
                 </el-table-column>
                 <el-table-column label="Actions" align="center" width="350" class-name="small-padding fixed-width">
                     <template slot-scope="{row}">
-                        <el-button type="primary" size="mini" @click="edit(row)" style="color: white">
+                        <el-button type="primary" size="mini" @click="edit(row)" style="color: white"><i
+                                class="el-icon-edit-outline"></i>
+
                             Edit
                         </el-button>
-                        <el-button v-if="row.status!='published'" size="mini" type="success"
-                                   @click="changeStatus(row,'published')" style="color: white">
-                            Publish
-                        </el-button>
-                        <el-button v-if="row.status!='deleted'" size="mini" type="danger"
-                                   @click="changeStatus(row,'deleted')" style="color: white">
-                            Delete
+
+                        <el-button size="mini" type="danger"
+                                   @click="removeItem(row)" style="color: white"><i class="el-icon-delete"></i>
+                            Remove
                         </el-button>
                     </template>
                 </el-table-column>
@@ -107,8 +110,8 @@
             </el-pagination>
         </div>
 
-        <el-modal-create :temp="tempAd" :isVisible="dialogFormVisible" v-on:enlarge-text="showMess"
-                         v-on:modal-confirm="confirm">
+        <el-modal-create :temp="tempAd" :isVisible="dialogFormVisible" v-on:modal-cancel="modalCancel"
+                         v-on:modal-confirm="modalConfirm">
 
         </el-modal-create>
 
@@ -157,13 +160,13 @@
     import axios from "axios";
 
     import ElModalCreate from '../../components/ModalCreate'
-    import {item,statusOptions,isEmpty,urlPath} from "../../const";
+    import {item, statusOptions, isEmpty, urlPath} from "../../const";
     import ElDragSelect from '../../components/DragSelect' // base on element-ui
 
 
     export default {
 
-        components: {ElModalCreate,ElDragSelect},
+        components: {ElModalCreate, ElDragSelect},
         data: () => ({
             statusOpts: statusOptions,
             dialogStatus: '',
@@ -180,7 +183,7 @@
             filter: {
                 title: '',
                 status: '',
-                location:[]
+                location: []
             },
             options: {
                 page: 1,
@@ -195,23 +198,23 @@
             filterItems() {
                 this.listLoading = true;
                 let _filter = JSON.parse(JSON.stringify(this.filter));
-                if (!isEmpty(_filter.title)){
-                    _filter.title = { "$regex": _filter.title, "$options": "i" }
+                if (!isEmpty(_filter.title)) {
+                    _filter.title = {"$regex": _filter.title, "$options": "i"}
                 }
                 if (_filter.location.length > 0) {
-                    _filter.location = { $all : _filter.location }
+                    _filter.location = {$all: _filter.location}
                 }
 
 
                 axios
                     .post(urlPath("/ad/listing"), {
-                        options : this.options,
-                        filter:_filter
+                        options: this.options,
+                        filter: _filter
 
                     }).then(response => {
                     this.listLoading = false;
                     this.ads = response.data.docs;
-                    this.total= response.data.totalDocs;
+                    this.total = response.data.totalDocs;
                 })
                     .catch(error => {
                         this.listLoading = false;
@@ -222,9 +225,7 @@
                 this.tempAd = item
                 this.dialogStatus = 'create'
                 this.dialogFormVisible = true
-                this.$nextTick(() => {
-                    // this.$refs['dataForm'].clearValidate()
-                })
+
             },
             edit(item) {
                 this.dialogStatus = 'edit'
@@ -271,12 +272,12 @@
                 this.listLoading = true;
                 axios
                     .post(urlPath("/ad/listing"), {
-                        options : this.options
+                        options: this.options
 
                     }).then(response => {
                     this.listLoading = false;
                     this.ads = response.data.docs;
-                    this.total= response.data.totalDocs;
+                    this.total = response.data.totalDocs;
                 })
                     .catch(error => {
                         this.listLoading = false;
@@ -286,24 +287,32 @@
             fetchData() {
                 this.fetchDataWithOption();
             },
-            confirm() {
-                console.log(this.tempAd);
-                let item = JSON.parse(JSON.stringify(this.tempAd))
-                switch (this.dialogStatus) {
-                    case "create":
-                        this.createAd(item);
-                        break;
-                    case "edit":
-                        this.updateAd(item)
-                        break;
-                    default:
-                        console.log('confirm not handle');
+            modalConfirm(isValid) {
+                if (isValid === 'valid') {
+                    let item = JSON.parse(JSON.stringify(this.tempAd))
+                    switch (this.dialogStatus) {
+                        case "create":
+                            this.createAd(item);
+                            break;
+                        case "edit":
+                            this.updateAd(item)
+                            break;
+                        default:
+                            console.log('confirm not handle');
+                    }
+                    this.dialogFormVisible = false;
+                } else if (isValid === 'invalid') {
+                    this.$message({
+                        message: 'Form is invalid',
+                        type: 'error'
+                    });
                 }
-                // this.dialogFormVisible = false;
+
+
+            }, modalCancel() {
+                this.dialogFormVisible = false;
             },
-            changeStatus(item, status) {
-                console.log(status);
-            },
+
             showMess() {
                 this.tempAd = {}
                 this.dialogFormVisible = false;
@@ -311,20 +320,49 @@
                     message: this.temp.title,
                     type: 'success'
                 })
-            }
+            },
+            removeItem(item) {
+                let mess =  'This will permanently delete the* ' + item.title + ' * Continue?'
+                this.$confirm(mess, 'Warning', {
+                    confirmButtonText: 'OK',
+                    cancelButtonText: 'Cancel',
+                    type: 'warning'
+                }).then(() => {
+                    axios
+                        .post(urlPath("/ad/add"), {
+                            productId: item._id
+                        })
+                        .then(response => {
+                            this.$message({
+                                message: response.data.message,
+                                type: response.data.type
+                            });
+                            this.fetchData();
+                        });
+                }).catch(() => {
+                    this.$message({
+                        type: 'info',
+                        message: 'Delete canceled'
+                    });
+                });
 
+            }
         },
         created() {
+
+
             axios
-                .post(urlPath("/ad/listing"),{
-                    options : this.options
+                .post(urlPath("/ad/listing"), {
+                    options: this.options
                 })
                 .then(response => {
-                    console.log('fuck',response.data);
+                    console.log('fuck', response.data);
                     this.ads = response.data.docs;
                     this.total = response.data.totalDocs;
                 })
                 .catch(error => console.log(error));
+
+
         }
 
 

@@ -31,37 +31,37 @@ import Layout from '../layout'
  * all roles can be accessed
  */
 export const constantRoutes = [
-    {
-        path: '/redirect',
-        component: Layout,
-        hidden: true,
-        children: [
-            {
-                path: '/redirect/:path(.*)',
-                component: () => import('../views/redirect/index')
-            }
-        ]
-    },
-    {
-        path: '/login',
-        component: () => import('../views/login/index'),
-        hidden: true
-    },
-    {
-        path: '/auth-redirect',
-        component: () => import('../views/login/auth-redirect'),
-        hidden: true
-    },
-    {
-        path: '/404',
-        component: () => import('../views/error-page/404'),
-        hidden: true
-    },
-    {
-        path: '/401',
-        component: () => import('../views/error-page/401'),
-        hidden: true
-    },
+    // {
+    //     path: '/redirect',
+    //     component: Layout,
+    //     hidden: true,
+    //     children: [
+    //         {
+    //             path: '/redirect/:path(.*)',
+    //             component: () => import('../views/redirect/index')
+    //         }
+    //     ]
+    // },
+    // {
+    //     path: '/login',
+    //     component: () => import('../views/login/index'),
+    //     hidden: true
+    // },
+    // {
+    //     path: '/auth-redirect',
+    //     component: () => import('../views/login/auth-redirect'),
+    //     hidden: true
+    // },
+    // {
+    //     path: '/404',
+    //     component: () => import('../views/error-page/404'),
+    //     hidden: true
+    // },
+    // {
+    //     path: '/401',
+    //     component: () => import('../views/error-page/401'),
+    //     hidden: true
+    // },
 
     {
         path: '/',
@@ -73,7 +73,19 @@ export const constantRoutes = [
             component: () => import('../views/ads/index'),
             meta: { title: ' Advertisement ', icon: 'ads' }
         }]
-    },{
+    },  {
+        path: '/shopify',
+        name: 'Shopify',
+        component: Layout,
+        redirect: '/product',
+        children: [{
+            path: 'product',
+            name: 'Shopify',
+            component: () => import('../views/shopify/index'),
+            meta: { title: ' Shopify ', icon: 'shopify' }
+        }]
+    },
+    {
         path: '/excel',
         component: Layout,
         redirect: '/excel/upload-excel',
@@ -91,6 +103,7 @@ export const constantRoutes = [
             }
         ]
     },
+
 
     // 404 page must be placed at the end !!!
     { path: '*', redirect: '/404', hidden: true }

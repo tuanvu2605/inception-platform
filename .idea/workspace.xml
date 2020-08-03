@@ -2,10 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4538b60-9948-45a9-bf07-9af2cbff441d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/icons/svg/shopify.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/views/shopify/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/const.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/public/images/shopify.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/views/ads.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/UploadExcel/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/UploadExcel/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/ModalCreate/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/ModalCreate/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/const.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/const.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/views/ads/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/ads/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/views/excel/upload-excel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/excel/upload-excel.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/client/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/ad_schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/ad_schema.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,11 +56,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/client/src/assets" />
-      <recent name="$PROJECT_DIR$/client/src/views" />
+      <recent name="$PROJECT_DIR$/server/public/images" />
+      <recent name="$PROJECT_DIR$/server/public" />
+      <recent name="$PROJECT_DIR$/server/views" />
       <recent name="$PROJECT_DIR$/client/src/icons/svg" />
-      <recent name="$PROJECT_DIR$/client/src/components" />
-      <recent name="$PROJECT_DIR$/client/src" />
+      <recent name="$PROJECT_DIR$/client/src/assets" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -76,7 +89,11 @@
       <workItem from="1595687776055" duration="7533000" />
       <workItem from="1595735814436" duration="8212000" />
       <workItem from="1595849066121" duration="3438000" />
-      <workItem from="1595916354256" duration="3020000" />
+      <workItem from="1595916354256" duration="9169000" />
+      <workItem from="1596007308620" duration="27965000" />
+      <workItem from="1596163768244" duration="322000" />
+      <workItem from="1596164263577" duration="4820000" />
+      <workItem from="1596258978449" duration="10120000" />
     </task>
     <servers />
   </component>
@@ -124,19 +141,19 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="503" y="158" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1595591370277" />
-    <state x="506" y="293" width="683" height="486" key="find.popup" timestamp="1595742446305">
+    <state x="506" y="293" width="995" height="486" key="find.popup" timestamp="1596197366147">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="506" y="293" width="683" height="486" key="find.popup/0.23.1680.1027/-205.-1057.1920.1057@0.23.1680.1027" timestamp="1594108370652" />
-    <state x="506" y="293" width="683" height="486" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1595742446305" />
+    <state x="506" y="293" width="995" height="486" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1596197366147" />
     <state x="505" y="248" key="run.anything.popup" timestamp="1594276347269">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="505" y="248" key="run.anything.popup/0.23.1680.1027/-205.-1057.1920.1057@0.23.1680.1027" timestamp="1594276347269" />
     <state x="505" y="248" key="run.anything.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1594020161352" />
-    <state x="504" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1595921379756">
+    <state x="504" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1596197358367">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="504" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1595921379756" />
+    <state x="504" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1596197358367" />
   </component>
 </project>
