@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 
-mongoose.connect("mongodb://35.198.244.10:27017/platform", {
+mongoose.connect("mongodb://104.197.190.248:27017/platform", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });

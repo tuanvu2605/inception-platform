@@ -58,9 +58,9 @@
                         <a target="_blank" :href="row.url">{{ row.title }}</a>
                     </template>
                 </el-table-column>
-                <el-table-column label="Description" min-width="350">
+                <el-table-column label="Description" min-width="350" style="max-height: 300px">
                     <template slot-scope="{row}">
-                        {{ row.description }}
+                        <span v-html="row.description"></span>
                     </template>
                 </el-table-column>
                 <el-table-column label="Location" prop="id" width="250" align="center">
@@ -322,7 +322,7 @@
                 })
             },
             removeItem(item) {
-                let mess =  'This will permanently delete the* ' + item.title + ' * Continue?'
+                let mess = 'This will permanently delete the* ' + item.title + ' * Continue?'
                 this.$confirm(mess, 'Warning', {
                     confirmButtonText: 'OK',
                     cancelButtonText: 'Cancel',
@@ -330,7 +330,7 @@
                 }).then(() => {
                     axios
                         .post(urlPath("/ad/remove"), {
-                            itemId : item._id
+                            itemId: item._id
                         })
                         .then(response => {
                             this.$message({

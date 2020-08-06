@@ -51,7 +51,7 @@
             </el-table-column>
             <el-table-column label="Description" min-width="350">
                 <template slot-scope="{row}">
-                    {{ row.body_html }}
+                    <span v-html="row.body_html"></span>
                 </template>
             </el-table-column>
             <el-table-column label="Vendor" min-width="350">
