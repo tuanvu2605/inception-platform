@@ -13,7 +13,7 @@
                     </el-form-item>
                     <el-form-item label="Locations">
                         <el-drag-select v-model="filter.location" multiple placeholder="请选择" style="width:350px;">
-                            <el-option v-for="item in [{name: 'Viet Nam', code:'VN'}]" :key="item.code"
+                            <el-option v-for="item in countries" :key="item.code"
                                        :label="item.name" :value="item.code"/>
                         </el-drag-select>
                     </el-form-item>
@@ -158,7 +158,7 @@
 
 <script>
     import axios from "axios";
-
+    import { mapGetters } from 'vuex'
     import ElModalCreate from '../../components/ModalCreate'
     import {item, statusOptions, isEmpty, urlPath} from "../../const";
     import ElDragSelect from '../../components/DragSelect' // base on element-ui
@@ -167,6 +167,12 @@
     export default {
 
         components: {ElModalCreate, ElDragSelect},
+        computed: {
+            ...mapGetters([
+                'countries'
+
+            ])
+        },
         data: () => ({
             statusOpts: statusOptions,
             dialogStatus: '',

@@ -64,17 +64,18 @@
 </template>
 
 <script>
-    import axios from "axios";
     import ElDragSelect from '../../components/DragSelect' // base on element-ui
     import {statusOptions} from "../../const";
-    import {urlPath,validURL} from "../../const";
+    import {validURL} from "../../const";
+    import {mapGetters} from "vuex";
 
     export default {
         components: {ElDragSelect},
         name: 'ModalCreate',
 
+
         data () {
-            var checkImagesFormData =  (rule, value, callback) => {
+            let checkImagesFormData =  (rule, value, callback) => {
                 let check = true
                 value.forEach(item => {
                     if (!validURL(item)){
@@ -117,7 +118,6 @@
 
             },
             value: [],
-            countries: []
         }},
 
         props: {
@@ -129,6 +129,9 @@
         },
 
         computed: {
+            ...mapGetters([
+                'countries'
+            ]),
             IsShowModal: {
                 get: function () {
                     return this.isVisible
@@ -163,10 +166,6 @@
             }
         },
         created() {
-            axios
-                .get(urlPath("/country/all"))
-                .then(response => (this.countries = response.data , console.log(response.data)))
-                .catch(error => console.log(error));
 
         }
     }
