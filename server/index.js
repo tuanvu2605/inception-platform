@@ -169,11 +169,11 @@ app.post("/ad/remove", (req, res) => {
 app.post("/ad/get/mobile", (req, res) => {
     let _adType = req.body.adType;
     if (_adType == 1){
-        res.json({status : 'success' , url: 'http://35.198.244.10:3000/ad/mobile/full/1'})
+        res.json({status : 'success' , url: 'http://104.197.190.248:3000/ad/mobile/full/1'})
     }else if (_adType == 2){
-        res.json({status : 'success' , url: 'http://35.198.244.10:3000/ad/mobile/banner/1'})
+        res.json({status : 'success' , url: 'http://104.197.190.248:3000/ad/mobile/banner/1'})
     }else {
-        res.json({status : 'success' , url: 'http://35.198.244.10:3000/ad/mobile/native/1'})
+        res.json({status : 'success' , url: 'http://104.197.190.248:3000/ad/mobile/native/1'})
     }
     // adModel.findOne({adType: _adType}, (err, ad) => {
     //     if (err) {
