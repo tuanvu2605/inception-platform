@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 
-mongoose.connect("mongodb://localhost:27017/platform", {
+mongoose.connect("mongodb://platform:godofwar2605@34.71.238.73:27017/platform", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
@@ -199,7 +199,7 @@ app.get("/ad/shopifyIds", (req, res) => {
 app.get("/country/all", (req, res) => {
     countryModel.find({}, (err, countries) => {
         if (err) {
-            res.send("Error while fetching ads");
+            res.send("Error while fetching country");
         } else {
             res.json(countries);
         }
