@@ -14,7 +14,7 @@ export const item =  {
     "status": "published"
 }
 
-export const baseURL = "http://localhost:3000";
+export const baseURL = "http://34.71.238.73:3000";
 export const baseShopifyURL = "https://942c03cc5f07a20ddc56b47242aaa588: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@imazingthings.myshopify.com";
 export const productAPIURL = baseShopifyURL + "/admin/api/2020-07/products.json"
 

@@ -64,8 +64,10 @@ app.get("/ad/mobile/banner/:id", (req, res) => {
 });
 
 app.get("/ad/mobile/full/:id", (req, res) => {
-    let id = req.params.id;
-    adModel.findById(id, {}, {}, (err, result) => {
+    // let id = req.params.id;
+    let id = "5f314d30726fe508c833f520"
+    adModel.findById(id,(err, result) => {
+
         res.render("full", { ad: result });
     })
 });
@@ -169,11 +171,11 @@ app.post("/ad/remove", (req, res) => {
 app.post("/ad/get/mobile", (req, res) => {
     let _adType = req.body.adType;
     if (_adType == 1){
-        res.json({status : 'success' , url: 'http://104.197.190.248:3000/ad/mobile/full/1'})
+        res.json({status : 'success' , url: 'http://34.71.238.73:3000/ad/mobile/full/1'})
     }else if (_adType == 2){
-        res.json({status : 'success' , url: 'http://104.197.190.248:3000/ad/mobile/banner/1'})
+        res.json({status : 'success' , url: 'http://34.71.238.73:3000/ad/mobile/banner/1'})
     }else {
-        res.json({status : 'success' , url: 'http://104.197.190.248:3000/ad/mobile/native/1'})
+        res.json({status : 'success' , url: 'http://34.71.238.73:3000/ad/mobile/native/1'})
     }
     // adModel.findOne({adType: _adType}, (err, ad) => {
     //     if (err) {
