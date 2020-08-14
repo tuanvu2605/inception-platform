@@ -7,7 +7,7 @@ head
     link(rel='stylesheet' href='/css/banner.css')
     title #{ad.title}
 .container-fluid
-    .header
+    .header(onclick="window.open(#{ad.url},'window');" style='cursor: pointer;')
         .row.no-gutters
             .col-2.icon
                 div
@@ -18,6 +18,4 @@ head
                     | #{ad.title}
                 p.description
                     | #{ad.description}
-            a.btn.btn-primary.visit-button(href=ad.url role='button') Visit store
-
 script(src='/js/ads.js')

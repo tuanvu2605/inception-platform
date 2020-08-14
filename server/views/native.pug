@@ -1,4 +1,23 @@
 doctype html
-img(src='https://image.shutterstock.com/image-photo/bright-spring-view-cameo-island-260nw-1048185397.jpg' alt='Flowers in Chania' width='460' height='345')
-div
-    a(href='https://www.google.com/' target='_blank') Click Here
+head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css' integrity='sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk' crossorigin='anonymous')
+    link(href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet')
+    link(rel='stylesheet' href='/css/native.css')
+    title #{ad.title}
+.container-fluid
+    .header
+        .row.no-gutters
+            .col-2.icon
+                div
+                    each val in ad.images
+                        img.mySlides(src=val style='width:100%')
+            .col-8.pl-3.txt
+                p.title
+                    | #{ad.title}
+                p.description
+                    | #{ad.description}
+            a.btn.btn-primary.visit-button(href=ad.url role='button') Visit store
+
+script(src='/js/ads.js')
