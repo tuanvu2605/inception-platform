@@ -49,16 +49,16 @@ app.get("/", (req, res) => {
 });
 
 app.get("/ad/mobile/native/:id", (req, res) => {
-    let id = req.params.id;
-    adModel.findById(id, {}, {}, (err, result) => {
+    let id = "5f314d30726fe508c833f520"
+    adModel.findById(id,(err, result) => {
         res.render("native", { ad: result });
     })
 
 });
 
 app.get("/ad/mobile/banner/:id", (req, res) => {
-    let id = req.params.id;
-    adModel.findById(id, {}, {}, (err, result) => {
+    let id = "5f314d30726fe508c833f520"
+    adModel.findById(id,(err, result) => {
         res.render("banner", { ad: result });
     })
 });
