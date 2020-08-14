@@ -7,7 +7,8 @@ head
     link(rel='stylesheet' href='/css/banner.css')
     title #{ad.title}
 .container-fluid
-    .header(onclick="window.open(#{ad.url},'window');" style='cursor: pointer;')
+    - var onClick = "window.open('"+ ad.url +"','window');"
+    .header(onclick=onClick style='cursor: pointer;')
         .row.no-gutters
             .col-2.icon
                 div
