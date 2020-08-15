@@ -173,24 +173,29 @@ app.post("/ad/get/mobile", (req, res) => {
 });
 
 
-function findAdWithQuery(_adType,query,info,res){
+function findAdWithQuery(adType,query,info,res){
     adModel.find(query, (err, ads) => {
         if (err) {
             res.status(400).json({message: 'ADs not found.'});
         } else {
             if (ads.length > 0) {
                 const ad = ads[Math.floor(Math.random() * ads.length)];
-                let messLog = JSON.stringify({action:'view',info:info,ad_id:ad._id});
+                let adTypeDict = {
+                    1: 'full',
+                    2: 'banner',
+                    3: 'native'
+                }
+                let messLog = JSON.stringify({action:'view',info:info,ad_id:ad._id,adType:adTypeDict[adType]});
                 sendLogTelegram(messLog);
-                if (_adType == 1) {
+                if (adType == 1) {
                     res.json({status: 'success', url: 'http://34.71.238.73:3000/ad/mobile/full/' + ad._id})
-                } else if (_adType == 2) {
+                } else if (adType == 2) {
                     res.json({status: 'success', url: 'http://34.71.238.73:3000/ad/mobile/banner/' + ad._id})
                 } else {
                     res.json({status: 'success', url: 'http://34.71.238.73:3000/ad/mobile/native/' + ad._id})
                 }
             } else {
-                findAdWithQuery(_adType,{status: "published"},info,res);
+                findAdWithQuery(adType,{status: "published"},info,res);
             }
         }
     });
