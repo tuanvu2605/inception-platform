@@ -8,7 +8,6 @@ const axios = require('axios')
 const parse = require('parse-link-header')
 
 
-
 const app = express();
 app.use(useragent.express());
 app.use(expressip().getIpInfoMiddleware);
@@ -43,58 +42,50 @@ let countryModel = require("./country_schema")
 
 
 app.get("/", (req, res) => {
-    // const ipInfo = req.ipInfo;
-    // console.log(ipInfo)
-    res.send("hello");
+    const ipInfo = req.ipInfo;
+    res.send(ipInfo);
 });
 
 app.get("/ad/mobile/native/:id", (req, res) => {
-    let id = "5f314d30726fe508c833f520"
-    adModel.findById(id,(err, result) => {
-        res.render("native", { ad: result });
+    let id = req.params.id;
+    adModel.findById(id, (err, result) => {
+        if (result) {
+            res.render("native", {ad: result});
+        }else {
+
+        }
+
     })
 
 });
 
 app.get("/ad/mobile/banner/:id", (req, res) => {
-    let id = "5f314d30726fe508c833f520"
-    adModel.findById(id,(err, result) => {
-        res.render("banner", { ad: result });
+    let id = req.params.id;
+    adModel.findById(id, (err, result) => {
+        if(result){
+            res.render("banner", {ad: result});
+        }else {
+
+        }
+
     })
 });
 
 app.get("/ad/mobile/full/:id", (req, res) => {
-    // let id = req.params.id;
-    let id = "5f314d30726fe508c833f520"
-    adModel.findById(id,(err, result) => {
+    let id = req.params.id;
+    adModel.findById(id, (err, result) => {
+        if (result){
+            res.render("full", {ad: result});
+        }else{
 
-        res.render("full", { ad: result });
+        }
+
     })
 });
 
 app.get("/ad/mobile/enable", (req, res) => {
-    res.json({status:'success', isEnable : true})
+    res.json({status: 'success', isEnable: true})
 });
-
-
-
-// // uncompleted
-// app.get("/ad/all", (req, res) => {
-//
-//     const options = {
-//         page: 1,
-//         limit: 20
-//     };
-//
-//     adModel.paginate({}, options, function (err, result) {
-//         if (err) {
-//             res.send("Error while fetching countries");
-//         } else {
-//             res.json(result);
-//         }
-//     })
-// });
-
 
 app.post("/ad/listing", (req, res) => {
 
@@ -169,22 +160,30 @@ app.post("/ad/remove", (req, res) => {
 });
 
 app.post("/ad/get/mobile", (req, res) => {
+
     let _adType = req.body.adType;
-    if (_adType == 1){
-        res.json({status : 'success' , url: 'http://34.71.238.73:3000/ad/mobile/full/1'})
-    }else if (_adType == 2){
-        res.json({status : 'success' , url: 'http://34.71.238.73:3000/ad/mobile/banner/1'})
-    }else {
-        res.json({status : 'success' , url: 'http://34.71.238.73:3000/ad/mobile/native/1'})
-    }
-    // adModel.findOne({adType: _adType}, (err, ad) => {
-    //     if (err) {
-    //         res.status(400).json({message: 'ADs not found.'});
-    //     } else {
-    //         res.json(ad)
-    //
-    //     }
-    // });
+    const ipInfo = req.ipInfo;
+    console.log(ipInfo)
+    adModel.find({adType: _adType , status : "published"}, (err, ads) => {
+        console.log(ads.length)
+        let ad = ads[0];
+        if (err) {
+            res.status(400).json({message: 'ADs not found.'});
+        } else {
+            if (ads.length > 0) {
+                console.log(ad)
+                if (_adType == 1) {
+                    res.json({status: 'success', url: 'http://34.71.238.73:3000/ad/mobile/full/'+ ad._id})
+                } else if (_adType == 2) {
+                    res.json({status: 'success', url: 'http://34.71.238.73:3000/ad/mobile/banner/'+ ad._id})
+                } else {
+                    res.json({status: 'success', url: 'http://34.71.238.73:3000/ad/mobile/native/'+ ad._id})
+                }
+            }
+        }
+    });
+
+
 });
 
 
@@ -221,7 +220,7 @@ app.post("/shopify/products", (req, res) => {
     });
 });
 
-function initCountries(){
+function initCountries() {
     let cs = [
         {name: 'Afghanistan', code: 'AF'},
         {name: 'Åland Islands', code: 'AX'},
@@ -468,7 +467,7 @@ function initCountries(){
         {name: 'Zimbabwe', code: 'ZW'}
     ]
 
-    for (let i in cs){
+    for (let i in cs) {
         let c = cs[i]
         let country = new countryModel(c);
         country.save(err => {
