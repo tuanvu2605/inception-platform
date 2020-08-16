@@ -17,7 +17,9 @@ function carousel() {
 
 $(document).ready(function() {
     $("a").click(function() {
-        console.log('-----------ta')
+        let xmlHttp = new XMLHttpRequest();
+        xmlHttp.open( "GET", 'http://34.71.238.73:3000/ad/log/1', true ); // false for synchronous request
+        xmlHttp.send( null );
     });
 });
 

@@ -180,13 +180,6 @@ function findAdWithQuery(adType,query,info,res){
         } else {
             if (ads.length > 0) {
                 const ad = ads[Math.floor(Math.random() * ads.length)];
-                let adTypeDict = {
-                    1: 'full',
-                    2: 'banner',
-                    3: 'native'
-                }
-                let messLog = JSON.stringify({action:'view',info:info,ad_id:ad._id,adType:adTypeDict[adType]});
-                sendLogTelegram(messLog);
                 if (adType == 1) {
                     res.json({status: 'success', url: 'http://34.71.238.73:3000/ad/mobile/full/' + ad._id})
                 } else if (adType == 2) {
@@ -220,6 +213,18 @@ app.get("/country/all", (req, res) => {
             res.json(countries);
         }
     });
+});
+
+app.get("/ad/log/:adType", (req, res) => {
+    const ipInfo = req.ipInfo;
+    let adType = req.params.adType;
+    let adTypeDict = {
+        1: 'full',
+        2: 'banner',
+        3: 'native'
+    }
+    let messLog = JSON.stringify({action:'click',info:ipInfo,adType:adTypeDict[adType]});
+    sendLogTelegram(messLog);
 });
 
 
