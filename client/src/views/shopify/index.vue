@@ -125,7 +125,9 @@
                         })
                         .then(response => {
                             this.products = response.data.products;
-                            this.links = response.data.links;
+                            if (response.data.links){
+                                this.links = response.data.links;
+                            }
                             this.listLoading = false;
                         })
                         .catch(error => {
@@ -144,7 +146,10 @@
                         })
                         .then(response => {
                             this.products = response.data.products;
-                            this.links = response.data.links;
+                            if (response.data.links){
+                                this.links = response.data.links;
+                            }
+
                             this.listLoading = false;
                         })
                         .catch(error => {
@@ -265,7 +270,9 @@
                 .then(response => {
                     this.listLoading = false;
                     this.products = response.data.products;
-                    this.links = response.data.links;
+                    if (response.data.links){
+                        this.links = response.data.links;
+                    }
 
                 })
                 .catch(error => {

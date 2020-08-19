@@ -39,7 +39,7 @@ const adSchema = mongoose.Schema({
     },
     sku: {
         type: String,
-        required: true
+        required: false
     },
     description: {
         type: String,
