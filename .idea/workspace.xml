@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4538b60-9948-45a9-bf07-9af2cbff441d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/views/huawei/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/huawei.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/const.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/const.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/views/shopify/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/shopify/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/views/ads/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/ads/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/ad_schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/ad_schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +43,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.startup.tasks" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -91,7 +95,15 @@
       <workItem from="1597557669553" duration="6888000" />
       <workItem from="1597652937289" duration="844000" />
       <workItem from="1597655243997" duration="583000" />
-      <workItem from="1597805995346" duration="3157000" />
+      <workItem from="1597805995346" duration="4795000" />
+      <workItem from="1597991485824" duration="2339000" />
+      <workItem from="1598108523919" duration="404000" />
+      <workItem from="1598234884120" duration="1065000" />
+      <workItem from="1598354409649" duration="3252000" />
+      <workItem from="1598427313247" duration="2956000" />
+      <workItem from="1598512954588" duration="2129000" />
+      <workItem from="1598584519562" duration="6806000" />
+      <workItem from="1599629780810" duration="906000" />
     </task>
     <servers />
   </component>
@@ -107,10 +119,10 @@
     </state>
     <state x="312" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.1027/-205.-1057.1920.1057@0.23.1680.1027" timestamp="1594107233695" />
     <state x="312" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1595695970304" />
-    <state x="554" y="346" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1596449855046">
+    <state x="554" y="346" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599630317260">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="554" y="346" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1596449855046" />
+    <state x="554" y="346" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1599630317260" />
     <state x="578" y="290" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594720844689">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>

@@ -275,6 +275,7 @@
                 this.fetchData();
             },
             fetchDataWithOption() {
+
                 this.listLoading = true;
                 axios
                     .post(urlPath("/ad/listing"), {
@@ -290,7 +291,9 @@
                         console.log(error)
                     });
             },
+
             fetchData() {
+
                 this.fetchDataWithOption();
             },
             modalConfirm(isValid) {
@@ -355,7 +358,7 @@
             }
         },
         created() {
-
+            this.getOauthToken();
 
             axios
                 .post(urlPath("/ad/listing"), {
@@ -367,6 +370,7 @@
                     this.total = response.data.totalDocs;
                 })
                 .catch(error => console.log(error));
+
 
 
         }

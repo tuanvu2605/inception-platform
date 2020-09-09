@@ -14,9 +14,23 @@ export const item =  {
     "status": "published"
 }
 
-export const baseURL = "http://34.71.238.73:3000";
+export const baseURL = "http://localhost:3000";
 export const baseShopifyURL = "https://942c03cc5f07a20ddc56b47242aaa588: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@imazingthings.myshopify.com";
 export const productAPIURL = baseShopifyURL + "/admin/api/2020-07/products.json"
+
+
+
+
+export const tokenUrl = "https://login.cloud.huawei.com/oauth2/v2/token";
+/**
+ * 联盟用户界面生成的OAuth2.0 客户端id 跟密钥
+ */
+export const clientId = "102422523";
+export const secret = "a2c95f25bc421a3fd0f77d2118743d925c68fd189675ad6a4a7980a45125e705";
+/**
+ * 调用数据的网关
+ */
+export const reportUrl = "https://ads.cloud.huawei.com/openapi/monetization/reports/v1/publisher";
 
 export function getShopifyProductsURL(limit,pageInfo) {
     let url = productAPIURL + "?limit="+ limit

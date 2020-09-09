@@ -228,6 +228,11 @@ app.get("/ad/log/:adType", (req, res) => {
 });
 
 
+app.get("/version/update", (req, res) => {
+   res.json({isUpdate: true, url: 'https://appgallery.huawei.com/#/app/C102171019?locale=en_US&source=appshare&subsource=C102171019'});
+});
+
+
 // shopify
 app.post("/shopify/products", (req, res) => {
     let url = req.body.shopifyURL;
