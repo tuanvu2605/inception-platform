@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4538b60-9948-45a9-bf07-9af2cbff441d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/views/huawei/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/huawei.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/version_schema.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/const.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/const.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/views/ads/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/ads/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/ad_schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/ad_schema.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +99,9 @@
       <workItem from="1598427313247" duration="2956000" />
       <workItem from="1598512954588" duration="2129000" />
       <workItem from="1598584519562" duration="6806000" />
-      <workItem from="1599629780810" duration="906000" />
+      <workItem from="1599629780810" duration="2330000" />
+      <workItem from="1599673512197" duration="288000" />
+      <workItem from="1599706872831" duration="3830000" />
     </task>
     <servers />
   </component>
