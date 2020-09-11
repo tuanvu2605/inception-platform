@@ -2,9 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4538b60-9948-45a9-bf07-9af2cbff441d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/server/version_schema.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/configs/express.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/configs/mongoose.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/controller/ads_controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/controller/country_controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/controller/shopify_controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/controller/version_controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/models/user_schema.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/routes/routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/ad_schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/ad_schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/country_schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/country_schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/employee_schema.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/priority_schema.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/todo_schema.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/tracking_schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/tracking_schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/user_schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/configs/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/version_schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/version_schema.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +44,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="10.15.3" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -38,16 +55,16 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.startup.tasks" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/server/models" />
       <recent name="$PROJECT_DIR$/server/public/css" />
       <recent name="$PROJECT_DIR$/server/public/images" />
       <recent name="$PROJECT_DIR$/server/public" />
       <recent name="$PROJECT_DIR$/server/views" />
-      <recent name="$PROJECT_DIR$/client/src/icons/svg" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -101,7 +118,7 @@
       <workItem from="1598584519562" duration="6806000" />
       <workItem from="1599629780810" duration="2330000" />
       <workItem from="1599673512197" duration="288000" />
-      <workItem from="1599706872831" duration="3830000" />
+      <workItem from="1599706872831" duration="9325000" />
     </task>
     <servers />
   </component>
@@ -145,9 +162,10 @@
     </state>
     <state width="1680" height="287" key="GridCell.Tab.0.right/0.23.1680.1027/-205.-1057.1920.1057@0.23.1680.1027" timestamp="1594276349701" />
     <state width="1659" height="280" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1596788916805" />
-    <state x="341" y="175" key="SettingsEditor" timestamp="1596432773391">
+    <state x="341" y="175" key="SettingsEditor" timestamp="1599813158005">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
+    <state x="341" y="175" key="SettingsEditor/0.23.1680.1027/-205.-1057.1920.1057@0.23.1680.1027" timestamp="1599813158005" />
     <state x="341" y="175" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1596432773391" />
     <state x="503" y="158" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595591370277">
       <screen x="0" y="23" width="1680" height="1027" />

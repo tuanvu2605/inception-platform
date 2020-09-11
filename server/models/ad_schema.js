@@ -54,4 +54,4 @@ const adSchema = mongoose.Schema({
 });
 
 adSchema.plugin(mongoosePaginate);
-const ad = (module.exports = mongoose.model("ad", adSchema));
+module.exports = mongoose.model("Ads", adSchema);

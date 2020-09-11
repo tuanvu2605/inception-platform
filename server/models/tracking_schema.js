@@ -56,4 +56,4 @@ const trackingSchema = mongoose.Schema({
     timestamps: { createdAt: 'created_at'   , updatedAt: 'updated_at' }
 });
 
-const tracking = (module.exports = mongoose.model("tracking", trackingSchema));
+module.exports = mongoose.model("Tracking", trackingSchema);

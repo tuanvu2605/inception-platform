@@ -24,4 +24,4 @@ const versionSchema = mongoose.Schema({
     timestamps: { createdAt: 'created_at'   , updatedAt: 'updated_at' }
 });
 
-const version = (module.exports = mongoose.model("version", versionSchema));
+module.exports = mongoose.model("Version", versionSchema);
