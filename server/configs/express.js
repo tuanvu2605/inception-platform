@@ -14,6 +14,7 @@ module.exports = function()
     app.use(cors());
     app.set('views', './views');
     app.use(express.static(path.join(__dirname, 'public')));
+
     app.set('view engine', 'pug');
     app.use(bodyParser.urlencoded({extended: false}));
     app.use(bodyParser.json());

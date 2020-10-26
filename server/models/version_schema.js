@@ -16,8 +16,17 @@ const versionSchema = mongoose.Schema({
         required: true
     },
     url:{
+        type: Boolean,
+        required: true
+    },
+    url:{
         type: String,
         required: true
+    },
+    dependencies :{
+        type: [String],
+        required: true,
+        default: []
     }
 
 },{

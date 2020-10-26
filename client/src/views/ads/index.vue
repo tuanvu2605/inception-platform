@@ -358,8 +358,7 @@
             }
         },
         created() {
-            this.getOauthToken();
-
+            
             axios
                 .post(urlPath("/ad/listing"), {
                     options: this.options

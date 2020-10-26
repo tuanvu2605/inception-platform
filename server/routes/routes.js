@@ -6,6 +6,8 @@ const version_controller = require('../controller/version_controller')
 module.exports = function (app) {
     // ads
     app.get("/ad/mobile/native/:id", ads_controller.getNativeAdsById)
+    //getAmazonAds
+    app.get("/ad/mobile/amz", ads_controller.getAmazonAds)
     app.get("/ad/mobile/banner/:id", ads_controller.getBannerAdsById)
     app.get("/ad/mobile/full/:id", ads_controller.getFullAdsById)
     app.get("/ad/mobile/enable", ads_controller.getMobileAdsStatus)
@@ -24,5 +26,6 @@ module.exports = function (app) {
 
     // version
     app.get("/version/update/:packageName", version_controller.getVersionUpdateByPackageName)
+
 
 }

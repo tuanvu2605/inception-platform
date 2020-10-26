@@ -3,6 +3,10 @@ const ads = mongoose.model('Ads');
 const axios = require('axios')
 
 
+exports.getAmazonAds = function (req, res) {
+    res.render("amzads");
+}
+
 exports.getNativeAdsById = function (req, res) {
     let id = req.params.id;
     ads.findById(id, (err, result) => {

@@ -5,7 +5,6 @@ const db = mongoose();
 const app = express()
 
 
-
 app.get("/", (req, res) => {
     const ipInfo = req.ipInfo;
     res.send(ipInfo);

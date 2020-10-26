@@ -2,25 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4538b60-9948-45a9-bf07-9af2cbff441d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/configs/express.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/configs/mongoose.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/controller/ads_controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/controller/country_controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/controller/shopify_controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/controller/version_controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/models/user_schema.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/routes/routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/tuananh.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/controller/email_controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/models/version_dependency_schema.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/views/amzads.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/ad_schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/ad_schema.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/country_schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/country_schema.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/employee_schema.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/const.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/const.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/views/ads/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/ads/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/configs/express.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/configs/express.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/configs/mongoose.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/configs/mongoose.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controller/ads_controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controller/ads_controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controller/version_controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controller/version_controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/priority_schema.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/todo_schema.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/tracking_schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/tracking_schema.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/user_schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/configs/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/version_schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/version_schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/version_schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/version_schema.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,16 +52,16 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.spelling" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/server" />
       <recent name="$PROJECT_DIR$/server/models" />
       <recent name="$PROJECT_DIR$/server/public/css" />
       <recent name="$PROJECT_DIR$/server/public/images" />
       <recent name="$PROJECT_DIR$/server/public" />
-      <recent name="$PROJECT_DIR$/server/views" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -118,7 +115,13 @@
       <workItem from="1598584519562" duration="6806000" />
       <workItem from="1599629780810" duration="2330000" />
       <workItem from="1599673512197" duration="288000" />
-      <workItem from="1599706872831" duration="9325000" />
+      <workItem from="1599706872831" duration="9613000" />
+      <workItem from="1600057115836" duration="6459000" />
+      <workItem from="1600251547762" duration="7915000" />
+      <workItem from="1600399321523" duration="597000" />
+      <workItem from="1600412109409" duration="1542000" />
+      <workItem from="1601970250634" duration="1671000" />
+      <workItem from="1603682894092" duration="97000" />
     </task>
     <servers />
   </component>
@@ -162,19 +165,23 @@
     </state>
     <state width="1680" height="287" key="GridCell.Tab.0.right/0.23.1680.1027/-205.-1057.1920.1057@0.23.1680.1027" timestamp="1594276349701" />
     <state width="1659" height="280" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1596788916805" />
-    <state x="341" y="175" key="SettingsEditor" timestamp="1599813158005">
+    <state x="341" y="175" key="SettingsEditor" timestamp="1600314698232">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="341" y="175" key="SettingsEditor/0.23.1680.1027/-205.-1057.1920.1057@0.23.1680.1027" timestamp="1599813158005" />
+    <state x="341" y="175" key="SettingsEditor/0.23.1680.1027/-205.-1057.1920.1057@0.23.1680.1027" timestamp="1600314698232" />
     <state x="341" y="175" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1596432773391" />
     <state x="503" y="158" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595591370277">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="503" y="158" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1595591370277" />
-    <state x="506" y="293" width="995" height="486" key="find.popup" timestamp="1597057001359">
+    <state x="648" y="468" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600337393454">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="506" y="293" width="683" height="486" key="find.popup/0.23.1680.1027/-205.-1057.1920.1057@0.23.1680.1027" timestamp="1594108370652" />
+    <state x="648" y="468" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1680.1027/-205.-1057.1920.1057@0.23.1680.1027" timestamp="1600337393454" />
+    <state x="506" y="293" width="683" height="486" key="find.popup" timestamp="1601976155849">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="506" y="293" width="683" height="486" key="find.popup/0.23.1680.1027/-205.-1057.1920.1057@0.23.1680.1027" timestamp="1601976155849" />
     <state x="506" y="293" width="995" height="486" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1597057001359" />
     <state x="505" y="248" key="run.anything.popup" timestamp="1594276347269">
       <screen x="0" y="23" width="1680" height="1027" />

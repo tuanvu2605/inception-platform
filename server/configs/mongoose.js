@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 
-module.exports = function() {
+module.exports = function () {
 
     const db = mongoose.connect("mongodb://platform:godofwar2605@34.71.238.73:27017/platform", {
         useNewUrlParser: true,
@@ -9,7 +9,8 @@ module.exports = function() {
     });
     require('../models/ad_schema');
     require('../models/country_schema');
-    require ('../models/version_schema');
+    require('../models/version_schema');
+    require('../models/version_dependency_schema')
 
     let connection = mongoose.connection;
     connection.on("open", () => {

@@ -15,8 +15,11 @@ export const item =  {
 }
 
 export const baseURL = "http://localhost:3000";
-export const baseShopifyURL = "https://942c03cc5f07a20ddc56b47242aaa588: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@imazingthings.myshopify.com";
-export const productAPIURL = baseShopifyURL + "/admin/api/2020-07/products.json"
+export const baseShopifyURL = "https://19e09e81f6a730528fc14d92b5e1e886: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@welovedesigns.myshopify.com"
+    // "https://942c03cc5f07a20ddc56b47242aaa588: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@imazingthings.myshopify.com";
+export const productAPIURL = baseShopifyURL + "/admin/api/2020-07/products.json";
+export const orderAPIURL = baseShopifyURL + "/admin/api/2020-07/orders.json";
+
 
 
 
