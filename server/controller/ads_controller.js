@@ -123,17 +123,19 @@ exports.adsRemoveItemById = function (req, res) {
 
 exports.getMobileAds = function (req, res) {
 
-    let _adType = req.body.adType;
-    const ipInfo = req.ipInfo;
-    let country = ipInfo.country ? ipInfo.country : '';
+    res.render("amzads");
 
-    let query = {};
-    if (country == '') {
-        query = {status: "published"}
-    } else {
-        query = {status: "published", location: country}
-    }
-    findAdWithQuery(_adType, query, ipInfo, res)
+    // let _adType = req.body.adType;
+    // const ipInfo = req.ipInfo;
+    // let country = ipInfo.country ? ipInfo.country : '';
+    //
+    // let query = {};
+    // if (country == '') {
+    //     query = {status: "published"}
+    // } else {
+    //     query = {status: "published", location: country}
+    // }
+    // findAdWithQuery(_adType, query, ipInfo, res)
 
 }
 

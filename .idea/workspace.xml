@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4538b60-9948-45a9-bf07-9af2cbff441d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/tuananh.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/controller/email_controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/models/version_dependency_schema.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/views/amzads.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/const.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/const.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/views/ads/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/ads/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/configs/express.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/configs/express.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/configs/mongoose.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/configs/mongoose.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/controller/ads_controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controller/ads_controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controller/version_controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controller/version_controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/version_schema.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/version_schema.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +107,8 @@
       <workItem from="1600399321523" duration="597000" />
       <workItem from="1600412109409" duration="1542000" />
       <workItem from="1601970250634" duration="1671000" />
-      <workItem from="1603682894092" duration="97000" />
+      <workItem from="1603682894092" duration="1167000" />
+      <workItem from="1604038874210" duration="99000" />
     </task>
     <servers />
   </component>
