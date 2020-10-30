@@ -123,7 +123,7 @@ exports.adsRemoveItemById = function (req, res) {
 
 exports.getMobileAds = function (req, res) {
 
-    res.render("amzads");
+    res.json({status: 'success', url: 'http://34.71.238.73:3000/ad/mobile/amz'})
 
     // let _adType = req.body.adType;
     // const ipInfo = req.ipInfo;
