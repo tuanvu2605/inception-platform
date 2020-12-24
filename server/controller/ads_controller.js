@@ -1,10 +1,23 @@
 const mongoose = require('mongoose');
 const ads = mongoose.model('Ads');
+const config = mongoose.model('Config');
 const axios = require('axios')
 
 
 exports.getAmazonAds = function (req, res) {
     res.render("amzads");
+}
+
+exports.rateNumberToShowAds = function (req, res) {
+
+    config.findOne( function(err,obj) {
+        if (err) {
+            res.json({ value : 6 })
+        } else {
+            let rate = obj.rate
+            res.json({value: rate})
+        }
+    });
 }
 
 exports.getNativeAdsById = function (req, res) {

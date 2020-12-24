@@ -7,6 +7,7 @@ module.exports = function (app) {
     // ads
     app.get("/ad/mobile/native/:id", ads_controller.getNativeAdsById)
     //getAmazonAds
+    app.get("/ad/rate", ads_controller.rateNumberToShowAds)
     app.get("/ad/mobile/amz", ads_controller.getAmazonAds)
     app.get("/ad/mobile/banner/:id", ads_controller.getBannerAdsById)
     app.get("/ad/mobile/full/:id", ads_controller.getFullAdsById)

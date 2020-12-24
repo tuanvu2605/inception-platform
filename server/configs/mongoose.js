@@ -10,6 +10,7 @@ module.exports = function () {
     require('../models/ad_schema');
     require('../models/country_schema');
     require('../models/version_schema');
+    require('../models/config_schema');
     require('../models/version_dependency_schema')
 
     let connection = mongoose.connection;
